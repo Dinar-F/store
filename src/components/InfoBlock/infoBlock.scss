@@ -1,0 +1,38 @@
+.infoBlock {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    padding-bottom: 18px;
+}
+
+.promo {
+    height: 420px;
+    padding: 26px;
+    flex: 0 0 300px;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
+
+    &__image {
+        width: 150px;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    &__button {
+        display: block;
+        margin: 0 auto;
+    }
+}

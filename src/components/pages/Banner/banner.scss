@@ -1,0 +1,63 @@
+.banner {
+    padding: 18px;
+    flex: 1 1 auto;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+
+    @media (max-width: 767px) {
+        height: 390px;
+        padding: 6px;
+    }
+
+    @media (max-width: 479px) {
+        height: 240px;
+    }
+
+    &__info {
+        flex: 0 0 40%;
+
+        @media (max-width: 767px) {
+            flex: 0 0 30%;
+        }
+    }
+
+    &__title {
+        font-size: 42px;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+
+        @media (max-width: 767px) {
+            font-size: 28px;
+        }
+
+        @media (max-width: 479px) {
+            font-size: 20px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: uppercase;
+        color: #616E74;
+    }
+
+    &__image {
+        flex: 0 1 50%;
+
+        @media (max-width: 767px) {
+            flex: 0 1 55%;
+        }
+
+        img {
+            width: 100%;
+            height: 380px;
+
+        }
+    }
+}

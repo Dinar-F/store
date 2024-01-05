@@ -1,0 +1,51 @@
+.filters {
+    padding: 15px 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 8px;
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 8px 6px;
+    }
+
+    &__byName {
+        border: 1px solid white;
+        border-radius: 6px;
+        padding: 6px;
+        width: 600px;
+
+        @media (max-width: 1024px) {
+            width: 100%;
+
+        }
+    }
+
+    &__byPrice {
+        display: flex;
+        gap: 20px;
+        border: 1px solid white;
+        border-radius: 6px;
+        padding: 6px;
+
+        @media (max-width: 1024px) {
+            width: 100%;
+        }
+
+        button {
+            display: none;
+        }
+    }
+
+    input {
+        background: var(--bg);
+        border-radius: 8px;
+        padding: 10px 18px;
+        width: 100%;
+    }
+}
