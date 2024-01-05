@@ -15,7 +15,7 @@ function App() {
   }, [dispatch]);
 
   return (
-    <div className="app">
+    <div className="store">
       <Header />
       <AuthForm />
       <InfoBlock />

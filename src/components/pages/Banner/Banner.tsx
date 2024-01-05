@@ -1,7 +1,6 @@
 import banner from "../../../images/banner.svg";
 import "./banner.scss";
 
-
 const Banner = () => {
     return (
         <section className="banner">
