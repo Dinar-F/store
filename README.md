@@ -20,8 +20,8 @@
 
 ## Screenshots
 
-![preview](/shop/forReadme/previewImage1.png)
-![preview](/shop/forReadme/previewImage2.png)
+![preview](/forReadme/previewImage1.png)
+![preview](/forReadme/previewImage2.png)
 
 ## Built With
 
