@@ -1,9 +1,9 @@
+import { useCallback } from "react";
 import { useGetCategoriesQuery } from "../../store/products/productsReduser";
 import { useAppDispatch } from "../../hooks/useAppDispatch";
 import { setCategoryId } from "../../store/filter/filterSlice";
 import { CategoryType } from "../../types/productTypes";
 import "./categories.scss";
-
 
 const Categories = () => {
     const dispatch = useAppDispatch();
@@ -11,9 +11,9 @@ const Categories = () => {
 
     const list: CategoryType[] = data?.filter((_, i) => i < 5) || [];
 
-    const handleClick = (id: number) => {
+    const handleClick = useCallback((id: number) => {
         dispatch(setCategoryId(id));
-    };
+    }, [dispatch]);
 
     return (
         <section className="categories">
@@ -25,7 +25,6 @@ const Categories = () => {
                         className="categories__item"
                         onClick={() => handleClick(id)}>
                         <img src={image} alt="" />
-
                         <h3>{name}</h3>
                     </li>
                 )}

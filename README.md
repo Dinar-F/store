@@ -1,27 +1,60 @@
-# React + TypeScript + Vite
+# Online store development
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Summary
 
-Currently, two official plugins are available:
+- [About the Project](#about-the-project)
+- [Screenshots](#screenshots)
+- [Built With](#built-with)
+- [Getting Started](#getting-started)
+- [Authors](#authors)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About the Project
 
-## Expanding the ESLint configuration
+Проект представляет собой интернет-магазин с адаптивным дизайном под различные разрешения экранов устройств.
+В рамках приложения реализованы:
+- Вывод продуктов, фильтрация по названию, по категории, по ценовому диапазону , а также живой поиск
+- Возможность перейти на отдельную страницы каждого товара, где вы сможете посмотреть больше фото и подробное описание
+- Регистрация и авторизация, а также возможность редактировать данные пользователя
+- Переход по страницам товара, корзине, профиля с помощью React Router.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## Screenshots
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+![preview](/shop/forReadme/previewImage1.png)
+![preview](/shop/forReadme/previewImage2.png)
+
+## Built With
+
+- Typescript
+- React + React Hooks
+- Redux Toolkit, RTK Query
+- React Router Dom
+- SCSS
+
+## Getting Started
+
+To set up a local copy of the project follow the steps below.
+
+## Installation
+
+1. Clone to local machine
+
+```sh
+git clone https://github.com/Dinar-F/store.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Install NPM packages
+
+```sh
+npm install
+```
+
+3. Start program
+
+```sh
+npm run dev
+```
+
+## Authors
+
+- **Dinar Faizullin** - [github](https://github.com/Dinar-F)

@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toggleForm } from "../../store/user/userSlice";
 import { useAppDispatch } from "../../hooks/useAppDispatch";
 import { useAppSelector } from "../../hooks/useAppSelector";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { ROUTES } from "../../constants";
 import mainLogo from "../../images/mainLogo.svg";
 import cartLogo from "../../images/cart.svg";
@@ -18,14 +18,15 @@ const Header = () => {
     const [userValues, setUserValues] = useState({ name: "Guest", avatar: avatar });
 
     useEffect(() => {
-        if (!currentUser) return;
-        setUserValues(currentUser);
+        if (currentUser) {
+            setUserValues(currentUser);
+        }
     }, [currentUser]);
 
-    const showAuthForm = () => {
+    const showAuthForm = useCallback(() => {
         if (!currentUser) dispatch(toggleForm(true));
         else navigate(ROUTES.PROFILE);
-    };
+    }, [currentUser, dispatch, navigate]);
 
     return (
         <header className="header">

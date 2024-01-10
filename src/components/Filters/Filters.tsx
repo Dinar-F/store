@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { useAppDispatch } from "../../hooks/useAppDispatch";
 import { setSearchTitle, setSearchPrice, removeFilters } from "../../store/filter/filterSlice";
 import { defaultPriceLimit } from "../../constants";
@@ -13,9 +13,9 @@ const Filters = () => {
         setTitle(event.target.value);
     };
 
-    const changePriceLimit = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setPriceLimit({ ...priceLimit, [event.target.name]: event.target.value });
-    };
+    const changePriceLimit = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
+        setPriceLimit((priceLimit) => ({ ...priceLimit, [event.target.name]: event.target.value }));
+    }, [setPriceLimit]);
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
