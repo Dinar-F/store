@@ -1,6 +1,6 @@
 import Promo from "./Promo";
 import AppRoutes from "./AppRoutes";
-import "./infoblock.scss";
+import "./infoBlock.scss";
 
 const InfoBlock = () => {
     return (
