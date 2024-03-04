@@ -3,6 +3,7 @@
 ## Summary
 
 - [About the Project](#about-the-project)
+- [Usage](#usage)
 - [Screenshots](#screenshots)
 - [Built With](#built-with)
 - [Getting Started](#getting-started)
@@ -17,6 +18,9 @@
 - Регистрация и авторизация, а также возможность редактировать данные пользователя
 - Переход по страницам товара, корзине, профиля с помощью React Router.
 
+## Usage
+
+- Visit [Store](https://tiny-semolina-452c04.netlify.app/)
 
 ## Screenshots
 
